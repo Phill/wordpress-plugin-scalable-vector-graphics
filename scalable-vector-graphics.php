@@ -54,11 +54,9 @@ class scalable_vector_graphics {
 				$content .= '</iframe>';
 			break;
 			case 'embed':
+                        default:
 				$content .= '<embed src="' . $atts[ 'src' ] . '" width="' . $atts[ 'width' ] . '" height="' . $atts[ 'height' ] . '" ';
 				$content .= 'type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" style="' . $atts[ 'style' ] . '" /> ';
-			break;
-			default:
-				$content .= "\n" . '<!-- Invalid value ignored: ' . $atts[ 'type' ] . ' -->' . "\n";
 			break;
 		}
 
